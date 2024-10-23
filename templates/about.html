@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Page Header-->
+<!-- <header class="masthead" style="background-image: url('{{url_for('static', filename='assets/img/about-bg.jpg')}}')"> -->
+<header class="masthead" style="background-image: url( {{image_url}} )">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1>About Me</h1>
+                    <span class="subheading">This is what I do.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<main class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <p>Hi, I'm Aryan Kansal, currently in the final stages of my B.Tech in Computer Science Engineering, specializing in Artificial Intelligence and Data Science at Guru Gobind Singh Indraprastha University. I've managed to maintain a solid CGPA of 8.7 while diving deep into my passion for technology and AI. My journey so far has been quite enriching; I've had the chance to work on some cool projects, like developing a real-time face-based AI model during my summer internship at the Centre of Excellence, GGSIPU. I’ve also been part of IBM’s Skills Build programs, where I honed my skills in data visualization and analytics using Python, SQL, and even explored the realms of Blockchain and Cloud Computing.</p>       
+                <p>Apart from my academic pursuits, I've always been keen on applying my knowledge to solve real-world problems. I led a project during a national-level hackathon where my team developed an interactive website to spread awareness on sexual health and wellness, which was an eye-opening experience. I'm a firm believer in continuous learning and am always on the lookout for new challenges to tackle, whether it's through projects, hackathons, or just experimenting with new tech in my free time.</p>
+                <p>Outside the tech world, I enjoy being a part of community activities and have even served as the Secretary of our Nature Club, which was a fantastic way to blend my love for nature with leadership skills. I like to think of myself as a problem-solver, someone who’s always curious and ready to explore the next big thing. Whether it's a tech project or just a thought-provoking conversation, I'm all in!</p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

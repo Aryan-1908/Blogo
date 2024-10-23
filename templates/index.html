@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Page Header-->
+<!-- <header class="masthead" style="background-image:url('{{url_for('static',filename='assets/img/home-bg.jpg')}}')"> -->
+<!-- above is method which is giving errors in IDE although its working but for sake,
+             While the code works fine in practice (as evidenced by the image loading correctly), 
+             the IDE's linter isn't aware of Jinja2 syntax i use method 2 which is below -->
+
+<header class="masthead" style="background-image: url( {{image_url}} )">
+
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="heading">
+                    <h1><b>BLOGO</b></h1>
+                    <span class="subheading">A Blog by A.K</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+
+            {% for post in posted %}
+            <!-- <li><a href="/post/post.slug">{{ post.title }}</a></li> -->
+
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a href="/post/{{post.slug}}">
+                    <h2 class="post-title">{{post.title}}</h2>
+                    <h3 class="post-subtitle">{{post.subheading}}</h3>
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    <a href="#!">ME</a>
+                     on {{post.date}}
+                </p>
+            </div>
+            {{post.content[0:115]}}...
+            {% endfor %}
+
+            
+            <!-- Divider-->
+            <hr class="my-4" />
+            <!-- Pager-->
+            <div class="d-flex justify-content-between mb-1">
+                <a class="btn btn-primary float-right" href="{{prev}}">&larr; Previous</a>
+                <a class="btn btn-primary float-left" href="{{next}}">Next &rarr;</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

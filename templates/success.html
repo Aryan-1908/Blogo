@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="refresh"  content="6;url=/post/{{post.slug}}"/>
+    <!-- content="6;url={{ url_for('post_ext', post_slug=post_slug) }} --> <!-- this is another method , we have to return post_slug -->
+
+    <title>Comment Added Successfully</title>
+</head>
+<body>
+    <h1>Comment Added Successfully!</h1>
+    <p>You will be redirected back to the post in a few seconds.</p>
+    <p>If you are not redirected, <a href="/post/{{post.slug}}">click here</a>.</p>
+</body>
+</html>
